@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 114856220440967308}
   - component: {fileID: 114049461337841414}
   - component: {fileID: 114553696586964732}
-  - component: {fileID: 114133996093751466}
   - component: {fileID: 114899457431432782}
   - component: {fileID: 114581207174884888}
   m_Layer: 0
@@ -180,9 +179,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!114 &114049461337841414
@@ -234,18 +233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputType: 1
---- !u!114 &114133996093751466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1306226178591816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f530aee5a584b749c88c7bdfdc92fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 1
 --- !u!114 &114212708016715032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 10
+  TimeOfInmortality: 5
 --- !u!114 &114856220440967308
 MonoBehaviour:
   m_ObjectHideFlags: 1
