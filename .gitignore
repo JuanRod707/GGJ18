@@ -39,6 +39,7 @@ sysinfo.txt
 */Assets/Plugins/
 Plugins.meta
 GGJ18/GGJ18.sln.DotSettings
+GGJ18/ProjectSettings/InputManager.asset
 
 # MAC stuff
 .DS_Store
