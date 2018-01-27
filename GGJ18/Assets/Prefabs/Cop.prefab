@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114199965457423568}
   - component: {fileID: 54972956677084738}
   - component: {fileID: 114865783021024572}
+  - component: {fileID: 114800195116587812}
   m_Layer: 0
   m_Name: Cop
   m_TagString: Npcs
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127270412042180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.73, y: 0, z: -1.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4914079619479950}
@@ -328,6 +329,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 0.5
+--- !u!114 &114800195116587812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127270412042180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114865783021024572
 MonoBehaviour:
   m_ObjectHideFlags: 1

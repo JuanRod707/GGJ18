@@ -7,11 +7,13 @@ public class WarpScript : MonoBehaviour {
     public WarpScript WrpDestination;
     public Transform RecieverPoint;
 
+    private List<string> canBeWarped = new List<string> { "Player", "Npcs", "Minion" };
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (canBeWarped.IndexOf(other.tag) != -1)
         {
-            other.GetComponentInParent<PlayerWarp>().Warp(WrpDestination.RecieverPoint.position);
+            other.GetComponentInParent<ObjectWarp>().Warp(WrpDestination.RecieverPoint.position);
         }
     }
 }

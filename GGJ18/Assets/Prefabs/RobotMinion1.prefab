@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114930679452258456}
   - component: {fileID: 65023115699644240}
   - component: {fileID: 82375021232225608}
+  - component: {fileID: 114612587309530718}
   m_Layer: 0
   m_Name: RobotMinion1
   m_TagString: Minion
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432947716186390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.7, y: 0, z: 6.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4234332075294414}
@@ -393,6 +394,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunToTag: Npcs
+--- !u!114 &114612587309530718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432947716186390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114755699282004162
 MonoBehaviour:
   m_ObjectHideFlags: 1

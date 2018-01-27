@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114528058359994736}
   - component: {fileID: 54611158600945620}
   - component: {fileID: 114752104518246122}
+  - component: {fileID: 114999623982270978}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Npcs
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033743114520250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: -3.0568564, y: 0, z: 5.493204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4965967493932256}
@@ -172,9 +173,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!114 &114528058359994736
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a84f1f28f4a9a94092155a33f6dbda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinionTag: Minion
+  MinionTag: 
 --- !u!114 &114721003480625020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,6 +227,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 4
+--- !u!114 &114999623982270978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033743114520250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136699469206308208
 CapsuleCollider:
   m_ObjectHideFlags: 1
