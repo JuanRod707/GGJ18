@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: aa28c6a21e2fa8b43a574c95ecf3474e
+timeCreated: 1517086866
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Redneck Zombies
+  fontNames:
+  - Redneck Zombies
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

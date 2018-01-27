@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e56a4dd0eb4df7a919af5f016722fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForgetDistance: 10
+  ForgetDistance: 5
 --- !u!114 &114910876465516442
 MonoBehaviour:
   m_ObjectHideFlags: 1
