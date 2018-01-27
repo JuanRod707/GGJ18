@@ -18,14 +18,13 @@ public class EntityDetector : MonoBehaviour
         var isNpc = other.CompareTag(Constants.tagNpcs);
         var isMinion = other.CompareTag(Constants.tagMinion);
         var minionIsFromDifferentFaction = other.gameObject.GetComponent<Minion>() != null &&
-                                           other.gameObject.GetComponent<Minion>().Faction ==
+                                           other.gameObject.GetComponent<Minion>().Faction !=
                                            playerFactionComponent.PlayerFaction;
-        var isOwnFactionMinion = isMinion &&
-                                 minionIsFromDifferentFaction;
+        var isDIfferentFactionMinion = isMinion && minionIsFromDifferentFaction;
         var isPlayer = other.CompareTag(Constants.tagPlayer) &&
                        playerFactionComponent.PlayerFaction !=
                        other.gameObject.GetComponentInParent<PlayerFactionComponent>().PlayerFaction;
-        if (isNpc || isMinion && !isOwnFactionMinion || isPlayer)
+        if (isNpc || isDIfferentFactionMinion || isPlayer)
         {
             EntitiesInsideTrigger.Add(other.gameObject);
         }

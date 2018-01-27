@@ -9,18 +9,16 @@ public class HealthComponent : MonoBehaviour, Damageable
 
     public void RecieveDamage(int damage, GameObject convertTo)
     {
-
         HitPoints -= damage;
         if (HitPoints <= 0 && this.CompareTag(Constants.tagNpcs))
         {
             Convert(convertTo);
         }
-
     }
 
-    void Start()
+    private void Start()
     {
-        RestartTimer();
+        timerInmortality = 0;
     }
 
     void Update()
@@ -30,13 +28,15 @@ public class HealthComponent : MonoBehaviour, Damageable
             timerInmortality -= Time.deltaTime;
         }
     }
+
     void RestartTimer()
     {
         timerInmortality = TimeOfInmortality;
     }
+
     public void RecieveDamage(int damage)
     {
-        if (timerInmortality < 0)
+        if (timerInmortality <= 0)
         {
             HitPoints -= damage;
             Debug.Log(string.Format("ReceiveDamage2::Health is currently {0}", this.HitPoints));
@@ -44,6 +44,7 @@ public class HealthComponent : MonoBehaviour, Damageable
             {
                 Destroy(this.gameObject);
             }
+            RestartTimer();
         }
     }
 
