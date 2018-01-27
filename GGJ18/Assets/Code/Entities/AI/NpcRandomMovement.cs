@@ -24,11 +24,21 @@ public class NpcRandomMovement : MonoBehaviour
         {
             SetNewNavPoint();
         }
+
+        Vector3 enemyPos = Vector3.zero;
+        var transformedEnemyPos = this.transform.InverseTransformPoint(enemyPos);
+        var resultInvertedPosition = this.transform.TransformPoint(-transformedEnemyPos);
+
     }
 
     public void SetNewNavPoint()
     {
         destination = navPoints.GetRandomPointPosition;
         navAgent.SetDestination(destination);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
     }
 }

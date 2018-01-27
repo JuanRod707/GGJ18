@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114721003480625020}
   - component: {fileID: 114528058359994736}
   - component: {fileID: 54611158600945620}
+  - component: {fileID: 114752104518246122}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Npcs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +44,7 @@ GameObject:
   - component: {fileID: 23080443346944162}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Npcs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033743114520250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.05, y: -0, z: -8}
+  m_LocalPosition: {x: -1.9818064, y: -0, z: -2.3957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4965967493932256}
@@ -213,6 +214,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 1
+--- !u!114 &114752104518246122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033743114520250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babe00945963d8040a341c0977146e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 4
 --- !u!136 &136699469206308208
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -235,7 +248,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 1
+  m_Speed: 0.6
   m_Acceleration: 1.5
   avoidancePriority: 50
   m_AngularSpeed: 1000

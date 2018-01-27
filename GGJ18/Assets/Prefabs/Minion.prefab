@@ -39,10 +39,13 @@ GameObject:
   - component: {fileID: 4633097310695378}
   - component: {fileID: 195396566879667434}
   - component: {fileID: 114697710198112492}
+  - component: {fileID: 114846132262346998}
   - component: {fileID: 54767108240717638}
+  - component: {fileID: 114119372807050120}
+  - component: {fileID: 65492240103658628}
   m_Layer: 0
   m_Name: Minion
-  m_TagString: Untagged
+  m_TagString: Minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106748461307504}
   - component: {fileID: 64206957137084636}
-  - component: {fileID: 114109679519184698}
+  - component: {fileID: 114304697619821662}
   m_Layer: 0
   m_Name: ProximityDetector
   m_TagString: Untagged
@@ -84,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591451119938428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.52, y: 0, z: -5.84}
+  m_LocalPosition: {x: -0.74402523, y: -0, z: -2.500859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4840410720720364}
@@ -157,7 +160,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -175,7 +178,34 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
---- !u!114 &114109679519184698
+--- !u!65 &65492240103658628
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591451119938428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 0.3}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &114119372807050120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591451119938428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51b6feedc2240aeb8675ec8d4d0d575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 10
+  DamagePerHit: 2
+  ConvertToId: MonMin1
+  RefName: Refs
+--- !u!114 &114304697619821662
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -183,10 +213,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854179810635002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a84f1f28f4a9a94092155a33f6dbda8, type: 3}
+  m_Script: {fileID: 11500000, guid: 943f5626d42d4e8993c477d976cdd3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunFromTag: Minion
+  RunToTag: Npcs
 --- !u!114 &114697710198112492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,6 +229,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 2
+--- !u!114 &114846132262346998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591451119938428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e56a4dd0eb4df7a919af5f016722fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForgetDistance: 10
 --- !u!136 &136926399305501340
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -221,7 +263,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 0.1
+  m_Speed: 1.2
   m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 1000

@@ -36,6 +36,10 @@ public class NpcRunFromDanger : MonoBehaviour
         randomMovement.enabled = false;
         var transformEnemyPosition = this.transform.InverseTransformPoint(fromPos);
         runToPosition = this.transform.TransformPoint(-transformEnemyPosition * RunSafeDistance);
-        navAgent.SetDestination(runToPosition);
+
+        if (navAgent != null)
+        {
+            navAgent.SetDestination(runToPosition);
+        }
     }
 }
