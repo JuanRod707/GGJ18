@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 public class NpcRunFromDanger : MonoBehaviour, ReactToMinion
 {
-
     public float MinApproach;
     public float RunSafeDistance;
 
@@ -14,22 +13,23 @@ public class NpcRunFromDanger : MonoBehaviour, ReactToMinion
 
     void ReloadComponents()
     {
-        if(randomMovement == null)
+        if (randomMovement == null)
             randomMovement = GetComponent<NpcRandomMovement>();
-        if(navAgent == null)
+        if (navAgent == null)
             navAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(this.transform.position, runToPosition) < MinApproach)
+        if (this.randomMovement != null && Vector3.Distance(this.transform.position, runToPosition) < MinApproach)
         {
-            randomMovement.enabled = true;
+            this.randomMovement.enabled = true;
             this.enabled = false;
-            randomMovement.SetNewNavPoint();
+            this.randomMovement.SetNewNavPoint();
         }
     }
+
     public void React(Transform fromPos)
     {
         ReloadComponents();

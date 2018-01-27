@@ -35,7 +35,9 @@ sysinfo.txt
 *.unitypackage
 
 # Jetbrains IDE stuff
-/.idea/
+*/.idea/
+*/Assets/Plugins/
+Plugins.meta
 
 # MAC stuff
 .DS_Store
