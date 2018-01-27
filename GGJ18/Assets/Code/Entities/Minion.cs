@@ -10,7 +10,7 @@ namespace Assets.Code.Entities
         public int HitPoints;
         public int DamagePerHit;
         public float AttackRate;
-        
+
         public string ConvertToId;
         public string RefName;
 
@@ -37,14 +37,15 @@ namespace Assets.Code.Entities
                 Destroy(this.gameObject);
             }
         }
-        
+
         private void OnCollisionStay(Collision collision)
         {
             if (collision.other.CompareTag("Npcs"))
             {
                 if (attackElapsed <= 0)
                 {
-                    collision.other.GetComponent<Npc>().RecieveDamage(DamagePerHit, refs.GetMinionById(ConvertToId));
+                    collision.other.GetComponent<HealthComponent>()
+                        .RecieveDamage(DamagePerHit, refs.GetMinionById(ConvertToId));
                     attackElapsed = AttackRate;
                     PunchSfx.Play();
                 }

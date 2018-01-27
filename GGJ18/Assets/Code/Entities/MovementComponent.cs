@@ -6,7 +6,6 @@ public class MovementComponent : MonoBehaviour
     public float MoveSpeed;
     private NavMeshAgent meshAgent;
 
-    // Use this for initialization
     void Start()
     {
         meshAgent = GetComponent<NavMeshAgent>();
@@ -14,6 +13,15 @@ public class MovementComponent : MonoBehaviour
 
     public void Move(Vector3 movementOffset)
     {
-        meshAgent.Move(Vector3.ClampMagnitude(movementOffset, MoveSpeed));
+        movementOffset = Vector3.ClampMagnitude(movementOffset, MoveSpeed);
+        meshAgent.Move(movementOffset);
+        RotateTowardsMovementDirection(movementOffset);
+    }
+
+    private void RotateTowardsMovementDirection(Vector3 movementOffset)
+    {
+        if (movementOffset != Vector3.zero)
+            transform.rotation =
+                Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movementOffset.normalized), 0.2f);
     }
 }
