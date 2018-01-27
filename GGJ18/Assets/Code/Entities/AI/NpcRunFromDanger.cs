@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Entities;
+using UnityEngine;
 using UnityEngine.AI;
 
-public class NpcRunFromDanger : MonoBehaviour
+public class NpcRunFromDanger : MonoBehaviour, ReactToMinion
 {
 
     public float MinApproach;
@@ -29,12 +30,12 @@ public class NpcRunFromDanger : MonoBehaviour
             randomMovement.SetNewNavPoint();
         }
     }
-    public void StartRunning(Vector3 fromPos)
+    public void React(Transform fromPos)
     {
         ReloadComponents();
         this.enabled = true;
         randomMovement.enabled = false;
-        var transformEnemyPosition = this.transform.InverseTransformPoint(fromPos);
+        var transformEnemyPosition = this.transform.InverseTransformPoint(fromPos.position);
         runToPosition = this.transform.TransformPoint(-transformEnemyPosition * RunSafeDistance);
 
         if (navAgent != null)

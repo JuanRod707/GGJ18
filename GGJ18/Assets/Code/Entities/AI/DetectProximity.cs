@@ -1,20 +1,21 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Entities;
+using UnityEngine;
 
 public class DetectProximity : MonoBehaviour {
 
-    public string RunFromTag;
+    public string MinionTag;
 
-    private NpcRunFromDanger runFromdanger;
+    private ReactToMinion reactToMinion;
 
 	void Start () {
-        runFromdanger = GetComponentInParent<NpcRunFromDanger>();
+	    reactToMinion = GetComponentInParent<ReactToMinion>();
 	}
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(RunFromTag))
+        if (other.CompareTag(MinionTag))
         {
-            runFromdanger.StartRunning(other.transform.position);
+            reactToMinion.React(other.transform);
         }
     }
 }
