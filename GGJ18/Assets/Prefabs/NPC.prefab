@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033743114520250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6071515, y: -0, z: -6.0081444}
+  m_LocalPosition: {x: 3.05, y: -0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4965967493932256}
@@ -187,7 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eee40ee3ca6a0d45be003c78fa40cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinApproach: 2
+  MinApproach: 1
+  RunSafeDistance: 3
 --- !u!114 &114668551668017286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37156e6bcd6fcef44a0dc734f9ad8033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinApproach: 2
+  MinApproach: 1
 --- !u!136 &136699469206308208
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -235,7 +236,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.1
   m_Speed: 1
-  m_Acceleration: 1
+  m_Acceleration: 1.5
   avoidancePriority: 50
   m_AngularSpeed: 1000
   m_StoppingDistance: 0.1

@@ -5,6 +5,7 @@ public class NpcRunFromDanger : MonoBehaviour
 {
 
     public float MinApproach;
+    public float RunSafeDistance;
 
     private NpcRandomMovement randomMovement;
     private NavMeshAgent navAgent;
@@ -34,7 +35,7 @@ public class NpcRunFromDanger : MonoBehaviour
         this.enabled = true;
         randomMovement.enabled = false;
         var transformEnemyPosition = this.transform.InverseTransformPoint(fromPos);
-        runToPosition = this.transform.TransformPoint(-transformEnemyPosition);
+        runToPosition = this.transform.TransformPoint(-transformEnemyPosition * RunSafeDistance);
         navAgent.SetDestination(runToPosition);
     }
 }
