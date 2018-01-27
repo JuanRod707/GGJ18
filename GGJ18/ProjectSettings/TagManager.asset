@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NavPoint
   - Minion
+  - Warp
   layers:
   - Default
   - TransparentFX
