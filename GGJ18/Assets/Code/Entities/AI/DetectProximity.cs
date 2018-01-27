@@ -13,7 +13,7 @@ public class DetectProximity : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(MinionTag))
+        if (!string.IsNullOrEmpty(MinionTag) && other.CompareTag(MinionTag))
         {
             reactToMinion.React(other.transform);
         }

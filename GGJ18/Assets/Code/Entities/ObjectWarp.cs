@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWarp : MonoBehaviour {
+public class ObjectWarp : MonoBehaviour {
 
     public void Warp(Vector3 position)
     {
