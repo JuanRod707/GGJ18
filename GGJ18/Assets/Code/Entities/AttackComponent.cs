@@ -4,7 +4,7 @@ public class AttackComponent : MonoBehaviour
 {
     private EntityDetector entityDetector;
     private MeleeDamageComponent meleeDamageComponent;
-
+    public GameObject FactionPrefab;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class AttackComponent : MonoBehaviour
                 if (npc == null) entityDetector.NpcsInsideTrigger.Remove(npc);
                 else
                 {
-                    npc.GetComponentInParent<Damageable>().RecieveDamage(meleeDamageComponent.Damage);
+                    npc.GetComponentInParent<Damageable>().RecieveDamage(meleeDamageComponent.Damage, FactionPrefab);
                 }
             }
         }

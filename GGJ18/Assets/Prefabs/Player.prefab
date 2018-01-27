@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114856220440967308}
   - component: {fileID: 114049461337841414}
   - component: {fileID: 114553696586964732}
+  - component: {fileID: 114133996093751466}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -46,6 +47,7 @@ GameObject:
   - component: {fileID: 4340720511102348}
   - component: {fileID: 64221365005824290}
   - component: {fileID: 114212708016715032}
+  - component: {fileID: 114440462312158580}
   m_Layer: 0
   m_Name: HitTrigger
   m_TagString: Untagged
@@ -217,6 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aff41b100f5d41e2ae82b166a209bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FactionPrefab: {fileID: 1432947716186390, guid: 14150a7373ef06d43ae9d8f3ef3747f3,
+    type: 2}
 --- !u!114 &114132697919139374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +233,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputType: 1
+--- !u!114 &114133996093751466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306226178591816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f530aee5a584b749c88c7bdfdc92fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!114 &114212708016715032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d82fcd2780f248e2b658dcfb94115c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcsInsideTrigger: []
 --- !u!114 &114237478038563962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,6 +268,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114440462312158580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1709980161235782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d82fcd2780f248e2b658dcfb94115c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NpcsInsideTrigger: []
 --- !u!114 &114553696586964732
 MonoBehaviour:
   m_ObjectHideFlags: 1
