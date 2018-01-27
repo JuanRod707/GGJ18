@@ -19,14 +19,20 @@ public class AttackComponent : MonoBehaviour
 
     private void HitEnemiesWithinTrigger()
     {
-        if (entityDetector.NpcsInsideTrigger.Count > 0)
+        entityDetector.EntitiesInsideTrigger.RemoveAll(x => x == null);
+        if (entityDetector.EntitiesInsideTrigger.Count > 0)
         {
-            foreach (var npc in entityDetector.NpcsInsideTrigger)
+            foreach (var entity in entityDetector.EntitiesInsideTrigger)
             {
-                if (npc == null) entityDetector.NpcsInsideTrigger.Remove(npc);
+                var damageableComponent =
+                    entity.GetComponentInParent<Damageable>() ?? entity.GetComponent<Damageable>();
+                if (entity.CompareTag(Constants.tagPlayer))
+                {
+                    damageableComponent.RecieveDamage(meleeDamageComponent.Damage);
+                }
                 else
                 {
-                    npc.GetComponentInParent<Damageable>().RecieveDamage(meleeDamageComponent.Damage, FactionPrefab);
+                    damageableComponent.RecieveDamage(meleeDamageComponent.Damage, FactionPrefab);
                 }
             }
         }

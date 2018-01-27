@@ -1,21 +1,33 @@
 ﻿using System.Collections.Generic;
+using Assets.Code.Entities;
 using UnityEngine;
 
 public class EntityDetector : MonoBehaviour
 {
-    public List<GameObject> NpcsInsideTrigger;
-
+    public List<GameObject> EntitiesInsideTrigger;
+    private PlayerFactionComponent playerFactionComponent;
 
     private void Start()
     {
-        NpcsInsideTrigger = new List<GameObject>();
+        EntitiesInsideTrigger = new List<GameObject>();
+        playerFactionComponent = GetComponentInParent<PlayerFactionComponent>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(Constants.tagNpcs))
+        var isNpc = other.CompareTag(Constants.tagNpcs);
+        var isMinion = other.CompareTag(Constants.tagMinion);
+        var minionIsFromDifferentFaction = other.gameObject.GetComponent<Minion>() != null &&
+                                           other.gameObject.GetComponent<Minion>().Faction ==
+                                           playerFactionComponent.PlayerFaction;
+        var isOwnFactionMinion = isMinion &&
+                                 minionIsFromDifferentFaction;
+        var isPlayer = other.CompareTag(Constants.tagPlayer) &&
+                       playerFactionComponent.PlayerFaction !=
+                       other.gameObject.GetComponentInParent<PlayerFactionComponent>().PlayerFaction;
+        if (isNpc || isMinion && !isOwnFactionMinion || isPlayer)
         {
-            NpcsInsideTrigger.Add(other.gameObject);
+            EntitiesInsideTrigger.Add(other.gameObject);
         }
     }
 
@@ -23,7 +35,7 @@ public class EntityDetector : MonoBehaviour
     {
         if (other.CompareTag(Constants.tagNpcs))
         {
-            NpcsInsideTrigger.Remove(other.gameObject);
+            EntitiesInsideTrigger.Remove(other.gameObject);
         }
     }
 }

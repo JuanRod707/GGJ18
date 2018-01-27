@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 114049461337841414}
   - component: {fileID: 114553696586964732}
   - component: {fileID: 114133996093751466}
+  - component: {fileID: 114899457431432782}
+  - component: {fileID: 114581207174884888}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -47,7 +49,6 @@ GameObject:
   - component: {fileID: 4340720511102348}
   - component: {fileID: 64221365005824290}
   - component: {fileID: 114212708016715032}
-  - component: {fileID: 114440462312158580}
   m_Layer: 0
   m_Name: HitTrigger
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1709980161235782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.16}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.07}
+  m_LocalScale: {x: 0.11, y: 0.05, z: 0.07}
   m_Children: []
   m_Father: {fileID: 4266334116681170}
   m_RootOrder: 1
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d82fcd2780f248e2b658dcfb94115c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NpcsInsideTrigger: []
+  EntitiesInsideTrigger: []
 --- !u!114 &114237478038563962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,18 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114440462312158580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1709980161235782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d82fcd2780f248e2b658dcfb94115c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NpcsInsideTrigger: []
 --- !u!114 &114553696586964732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +281,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+--- !u!114 &114581207174884888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306226178591816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babe00945963d8040a341c0977146e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 10
 --- !u!114 &114856220440967308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,6 +316,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputType: 1
+--- !u!114 &114899457431432782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306226178591816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49231b5db9b14cab8fa04dd4f22e25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerFaction: 0
 --- !u!136 &136319885706397970
 CapsuleCollider:
   m_ObjectHideFlags: 1

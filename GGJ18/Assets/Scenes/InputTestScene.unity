@@ -1105,6 +1105,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1591451119938428, guid: 9d6b9af3fc7c59348b798949e9383d78,
         type: 2}
+    - target: {fileID: 114899457431432782, guid: 3bd8179d035acb146b28377ce8afd3b4,
+        type: 2}
+      propertyPath: PlayerFaction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bd8179d035acb146b28377ce8afd3b4, type: 2}
   m_IsPrefabParent: 0
@@ -1151,12 +1156,6 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 114088574319151864, guid: 3bd8179d035acb146b28377ce8afd3b4,
-        type: 2}
-      propertyPath: FactionPrefab
-      value: 
-      objectReference: {fileID: 1432947716186390, guid: 14150a7373ef06d43ae9d8f3ef3747f3,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bd8179d035acb146b28377ce8afd3b4, type: 2}
   m_IsPrefabParent: 0
@@ -2390,6 +2389,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1591451119938428, guid: 9d6b9af3fc7c59348b798949e9383d78, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195396566879667434, guid: 9d6b9af3fc7c59348b798949e9383d78,
+        type: 2}
+      propertyPath: m_AutoRepath
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3636,6 +3640,15 @@ Prefab:
     - target: {fileID: 4862992874874244, guid: 14150a7373ef06d43ae9d8f3ef3747f3, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 195524259467154192, guid: 14150a7373ef06d43ae9d8f3ef3747f3,
+        type: 2}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432947716186390, guid: 14150a7373ef06d43ae9d8f3ef3747f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14150a7373ef06d43ae9d8f3ef3747f3, type: 2}
