@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eee40ee3ca6a0d45be003c78fa40cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinApproach: 1
-  RunSafeDistance: 3
+  MinApproach: 2.4
+  RunSafeDistance: 6.43
 --- !u!114 &114668551668017286
 MonoBehaviour:
   m_ObjectHideFlags: 1
