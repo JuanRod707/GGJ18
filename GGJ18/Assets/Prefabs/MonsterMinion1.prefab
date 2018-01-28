@@ -401,6 +401,7 @@ MonoBehaviour:
   AttackRate: 0.5
   ConvertToId: MonMin1
   RefName: Refs
+  DirectorName: Director
   PunchSfx: {fileID: 82552242484127006}
 --- !u!114 &114132778942419540
 MonoBehaviour:

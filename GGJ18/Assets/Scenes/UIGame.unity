@@ -1187,8 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac22ef77de2d324abcfd80405758d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreMonsters: {fileID: 1736831703}
-  ScoreRobots: {fileID: 1924716215}
+  ScoreMonsters: {fileID: 1736831705}
+  ScoreRobots: {fileID: 1924716217}
 --- !u!1001 &350409450
 Prefab:
   m_ObjectHideFlags: 0
@@ -4107,6 +4107,7 @@ GameObject:
   - component: {fileID: 1736831702}
   - component: {fileID: 1736831704}
   - component: {fileID: 1736831703}
+  - component: {fileID: 1736831705}
   m_Layer: 5
   m_Name: TxtScoreMonsters
   m_TagString: Untagged
@@ -4171,6 +4172,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1736831701}
+--- !u!114 &1736831705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736831701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c62359c761ea26468b9880bf993ae59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Format: 'Empire of Monsters: {0}'
 --- !u!1 &1747457284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,6 +4746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924716214}
   - component: {fileID: 1924716216}
+  - component: {fileID: 1924716217}
   - component: {fileID: 1924716215}
   m_Layer: 5
   m_Name: TxtScoreRobots
@@ -4798,6 +4812,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924716213}
+--- !u!114 &1924716217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924716213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c62359c761ea26468b9880bf993ae59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Format: 'Empire of Robots: {0}'
 --- !u!1001 &1948788078
 Prefab:
   m_ObjectHideFlags: 0
