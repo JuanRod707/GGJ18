@@ -1,4 +1,5 @@
-﻿using Assets.Code.Helpers;
+﻿using System.Linq;
+using Assets.Code.Helpers;
 using UnityEngine;
 
 namespace Assets.Code.Entities
@@ -10,13 +11,11 @@ namespace Assets.Code.Entities
         public int HitPoints;
         public int DamagePerHit;
         public float AttackRate;
-
         public string ConvertToId;
         public string RefName;
-
         public string DirectorName;
-
         public AudioSource PunchSfx;
+        public string[] TagsToDamage;
 
         private float attackElapsed;
         private PrefabReferences refs;
@@ -31,11 +30,6 @@ namespace Assets.Code.Entities
                 director = directorGo.GetComponent<Director>();
                 director.AddScore(this.Faction);
             }
-        }
-
-        void Update()
-        {
-            
         }
 
         public void RecieveDamage(int damage, GameObject convertTo)
@@ -56,36 +50,31 @@ namespace Assets.Code.Entities
 
         private void OnCollisionStay(Collision collision)
         {
-            if (collision.other.CompareTag("Npcs"))
+            if (TagsToDamage.Contains(collision.other.tag))
             {
                 if (attackElapsed <= 0)
                 {
-                    collision.other.GetComponent<HealthComponent>()
-                        .RecieveDamage(DamagePerHit, refs.GetMinionById(ConvertToId));
-                    attackElapsed = AttackRate;
-                    PunchSfx.Play();
-                }
-                else
-                {
-                    attackElapsed -= Time.deltaTime;
-                }
-            }
-            else if (collision.other.CompareTag("Minion"))
-            {
-                var minion = collision.other.GetComponent<Minion>();
-                if (minion.Faction != this.Faction)
-                {
-                    if (attackElapsed <= 0)
+                    var player = collision.other.GetComponent<PlayerFactionComponent>();
+                    var minion = collision.other.GetComponent<Minion>();
+
+                    if ((minion != null && minion.Faction != Faction) || (player != null && player.PlayerFaction != Faction))
                     {
-                        collision.other.GetComponent<Minion>()
+                        collision.other.GetComponent<Damageable>()
                             .RecieveDamage(DamagePerHit);
                         attackElapsed = AttackRate;
                         PunchSfx.Play();
                     }
                     else
                     {
-                        attackElapsed -= Time.deltaTime;
+                        collision.other.GetComponent<Damageable>()
+                            .RecieveDamage(DamagePerHit, refs.GetMinionById(ConvertToId));
+                        attackElapsed = AttackRate;
+                        PunchSfx.Play();
                     }
+                }
+                else
+                {
+                    attackElapsed -= Time.deltaTime;
                 }
             }
         }

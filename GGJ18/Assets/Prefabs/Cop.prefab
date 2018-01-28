@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 0.5
+  LineColor: {r: 0.9338235, g: 0.9338235, b: 0.9338235, a: 1}
 --- !u!114 &114800195116587812
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -182,7 +182,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432947716186390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7, y: 0, z: 6.2}
+  m_LocalPosition: {x: 2.66, y: 0, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4979310197878116}
@@ -298,9 +298,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64952442633315570
@@ -312,9 +312,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!65 &65023115699644240
@@ -519,7 +519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943f5626d42d4e8993c477d976cdd3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunToTag: Npcs
+  TagsToChase:
+  - Minion
+  - Npcs
+  - Player
 --- !u!114 &114051390861546850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -559,12 +562,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432947716186390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4e56a4dd0eb4df7a919af5f016722fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ForgetDistance: 5
+  LineColor: {r: 0.5808823, g: 0.08542388, b: 0.08542388, a: 1}
 --- !u!114 &114910876465516442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -577,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 0.5
+  LineColor: {r: 0.9852941, g: 0.2028547, b: 0.2028547, a: 1}
 --- !u!114 &114930679452258456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,6 +601,10 @@ MonoBehaviour:
   RefName: Refs
   DirectorName: Director
   PunchSfx: {fileID: 82693049792836294}
+  TagsToDamage:
+  - Player
+  - Npcs
+  - Minion
 --- !u!136 &136003252812453024
 CapsuleCollider:
   m_ObjectHideFlags: 1

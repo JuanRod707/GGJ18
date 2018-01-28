@@ -527,6 +527,10 @@ MonoBehaviour:
   RefName: Refs
   DirectorName: Director
   PunchSfx: {fileID: 82552242484127006}
+  TagsToDamage:
+  - Player
+  - Npcs
+  - Minion
 --- !u!114 &114132778942419540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,7 +553,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943f5626d42d4e8993c477d976cdd3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunToTag: Npcs
+  TagsToChase:
+  - Minion
+  - Npcs
+  - Player
 --- !u!114 &114669358154520298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -573,6 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinApproach: 0.5
+  LineColor: {r: 0.11402275, g: 0.8088235, b: 0.08920847, a: 1}
 --- !u!114 &114802736710007698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,12 +598,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591451119938428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4e56a4dd0eb4df7a919af5f016722fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ForgetDistance: 5
+  LineColor: {r: 0.07152336, g: 0.50735295, b: 0.05595804, a: 1}
 --- !u!136 &136644364457967420
 CapsuleCollider:
   m_ObjectHideFlags: 1

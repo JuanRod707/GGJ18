@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class NpcRandomMovement : MonoBehaviour
 {
     public float MinApproach;
+    public Color LineColor;
 
     private NavigationPoints navPoints;
     private Vector3 destination;
@@ -24,6 +25,8 @@ public class NpcRandomMovement : MonoBehaviour
         {
             SetNewNavPoint();
         }
+
+        Debug.DrawLine(this.transform.position, navAgent.destination, LineColor);
     }
 
     public void SetNewNavPoint()
