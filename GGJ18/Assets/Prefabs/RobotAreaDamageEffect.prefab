@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 64944332378393254}
   - component: {fileID: 114726972185990200}
   m_Layer: 0
-  m_Name: AreaDamageEffect
+  m_Name: RobotAreaDamageEffect
   m_TagString: Npcs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,8 +51,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151021898813886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 0, z: 2.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.25145715, y: -0.000000019476706, z: 1.4466175}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4410337864113500}
   m_Father: {fileID: 0}
@@ -180,3 +180,7 @@ MonoBehaviour:
   EntitiesInsideTrigger: []
   SecondsBeforeEffectStarts: 2
   SpecialSfx: {fileID: 82896804398503138}
+  Damage: 4
+  FactionPrefab: {fileID: 1432947716186390, guid: 14150a7373ef06d43ae9d8f3ef3747f3,
+    type: 2}
+  Faction: 0

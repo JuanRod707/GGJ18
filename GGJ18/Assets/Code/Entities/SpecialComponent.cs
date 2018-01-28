@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Helpers;
+using UnityEngine;
 
 public class SpecialComponent : MonoBehaviour
 {
-    public GameObject areaDamageEffect;
+    public GameObject robotAreaDamageEffectPrefab;
     public float SecondsBetweenSpecials = 2.0f;
     private float timeSinceLastSpecial;
+    public Faction Faction;
 
     private void Update()
     {
@@ -17,7 +19,10 @@ public class SpecialComponent : MonoBehaviour
         if (timeSinceLastSpecial > SecondsBetweenSpecials)
         {
             timeSinceLastSpecial = 0.0f;
-            Instantiate(areaDamageEffect, this.transform.position, Quaternion.identity);
+            if (Faction == Faction.Robot)
+            {
+                Instantiate(robotAreaDamageEffectPrefab, this.transform.position, Quaternion.identity);
+            }
         }
     }
 }
