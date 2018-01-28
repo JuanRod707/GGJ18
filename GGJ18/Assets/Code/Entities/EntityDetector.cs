@@ -32,9 +32,6 @@ public class EntityDetector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(Constants.tagNpcs))
-        {
-            EntitiesInsideTrigger.Remove(other.gameObject);
-        }
+        EntitiesInsideTrigger.Remove(other.gameObject);
     }
 }
