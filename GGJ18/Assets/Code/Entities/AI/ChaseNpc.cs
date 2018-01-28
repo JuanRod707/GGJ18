@@ -53,6 +53,9 @@ public class ChaseNpc : MonoBehaviour
         ReloadComponents();
         this.enabled = true;
         randomMovement.enabled = false;
-        navAgent.SetDestination(chasePos.position);
+        if (chasePos != null)
+        {
+            navAgent.SetDestination(chasePos.position);
+        }
     }
 }
