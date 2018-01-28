@@ -4,7 +4,6 @@ using UnityEngine;
 public class DetectProximity : MonoBehaviour {
 
     public string MinionTag;
-    public string PlayerTag;
 
     private ReactToMinion reactToMinion;
 
@@ -14,7 +13,7 @@ public class DetectProximity : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(MinionTag) || other.CompareTag(PlayerTag))
+        if (!string.IsNullOrEmpty(MinionTag) && other.CompareTag(MinionTag))
         {
             reactToMinion.React(other.transform);
         }

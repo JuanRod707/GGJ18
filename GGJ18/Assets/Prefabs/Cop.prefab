@@ -363,7 +363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinionTag: Minion
-  PlayerTag: Player
 --- !u!114 &114546605272975648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -410,7 +409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 8
-  TimeOfInmortality: 0
 --- !u!136 &136049346677256798
 CapsuleCollider:
   m_ObjectHideFlags: 1
