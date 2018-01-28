@@ -76,8 +76,8 @@ public class Director : MonoBehaviour {
 
     private void EndGame(){
 		string theWinner ="";
-		theWinner = scorePlayerMonsters > scorePlayerRobots ? "THE MONSTERS!!!" : "THE ROBOTS!!!";
-		theWinner = scorePlayerMonsters == scorePlayerRobots ? "OH! ITS A TIE" : theWinner;
+		theWinner = scorePlayerMonsters > scorePlayerRobots ? "THE MONSTERS" : "THE ROBOTS";
+		theWinner = scorePlayerMonsters == scorePlayerRobots ? "NO ONE... ITS A TIE" : theWinner;
 		WinnerText.SetLabel(theWinner);
 		FinalCanvas.SetActive(true);
 
@@ -85,10 +85,6 @@ public class Director : MonoBehaviour {
 	    {
 	        p.SetActive(false);
 	    }
-
-		Debug.Log("--------------------GAME END--------------------");
-		Debug.Log("--------------------AND THE WINNER IS--------------------");
-		Debug.Log(string.Format("--------------------{0}--------------------", theWinner));
 	}
 
     private IEnumerator DelayedRespawn(RespawnAction playerToRespawn, float delay)

@@ -11,15 +11,6 @@ public class HealthComponent : MonoBehaviour, Damageable
     public int currentHitpoints;
     private float timerInmortality;
 
-    public void RecieveDamage(int damage, GameObject convertTo)
-    {
-        currentHitpoints -= damage;
-        if (currentHitpoints <= 0 && this.CompareTag(Constants.tagNpcs))
-        {
-            Convert(convertTo);
-        }
-    }
-
     private void Start()
     {
         timerInmortality = 0;
@@ -39,19 +30,34 @@ public class HealthComponent : MonoBehaviour, Damageable
         timerInmortality = TimeOfInmortality;
     }
 
+    public void RecieveDamage(int damage, GameObject convertTo)
+    {
+        RecieveDamage(damage);
+        if (!IsAlive && this.CompareTag(Constants.tagNpcs))
+        {
+            Convert(convertTo);
+        }
+    }
+
     public void RecieveDamage(int damage)
     {
         if (timerInmortality <= 0)
         {
+            var playerComp = GetComponent<PlayerFactionComponent>();
+            if (playerComp != null)
+            {
+                Debug.Log(string.Format("Player {0} recieved {1} damage", playerComp.gameObject.name, damage));
+            }
+
             currentHitpoints -= damage;
             if (HpBar != null)
             {
                 UpdateHpBar();
             }
 
-        if (currentHitpoints <= 0)
+            if (currentHitpoints <= 0)
             {
-                var playerComp = GetComponent<PlayerFactionComponent>();
+//                var playerComp = GetComponent<PlayerFactionComponent>();
                 if (playerComp != null)
                 {
                     GameObject.Find("NPCs").GetComponent<DestroyMyMinions>()

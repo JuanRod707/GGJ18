@@ -16,8 +16,11 @@ public class AreaDamageEffect : MonoBehaviour
     public GameObject FactionPrefab;
     public Faction Faction;
 
+    private List<Damageable> damageables;
+
     private void Start()
     {
+        damageables = new List<Damageable>();
         EntitiesInsideTrigger = new List<GameObject>();
         StartCoroutine(ActivateEffect());
     }
@@ -38,6 +41,8 @@ public class AreaDamageEffect : MonoBehaviour
                 InflictDamageOnEntity(entity);
             }
         }
+
+        damageables.Clear();
         EntitiesInsideTrigger.Clear();
         yield return new WaitForSeconds(EffectDuration);
         Destroy(this.gameObject);
@@ -70,12 +75,19 @@ public class AreaDamageEffect : MonoBehaviour
     {
         var damageable = entity.GetComponent<Damageable>() ??
                          entity.GetComponentInParent<Damageable>();
-        damageable.RecieveDamage(Damage, FactionPrefab);
+        if (!damageables.Contains(damageable))
+        {
+            damageable.RecieveDamage(Damage, FactionPrefab);
+            damageables.Add(damageable);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        EntitiesInsideTrigger.Add(other.gameObject);
+        if (!EntitiesInsideTrigger.Contains(other.gameObject))
+        {
+            EntitiesInsideTrigger.Add(other.gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other)
