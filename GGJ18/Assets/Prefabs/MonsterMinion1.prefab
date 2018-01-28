@@ -527,6 +527,10 @@ MonoBehaviour:
   RefName: Refs
   DirectorName: Director
   PunchSfx: {fileID: 82552242484127006}
+  TagsToDamage:
+  - Player
+  - Npcs
+  - Minion
 --- !u!114 &114132778942419540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -551,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TagsToChase:
   - Minion
-  - Npc
+  - Npcs
   - Player
 --- !u!114 &114669358154520298
 MonoBehaviour:
