@@ -1539,7 +1539,7 @@ MonoBehaviour:
   ScoreRobots: {fileID: 1924716217}
   Timer: {fileID: 275071038}
   WinnerText: {fileID: 1724896929}
-  MatchLength: 2
+  MatchLength: 120
 --- !u!1001 &350409450
 Prefab:
   m_ObjectHideFlags: 0
@@ -2285,7 +2285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &550415747
 RectTransform:
   m_ObjectHideFlags: 0
