@@ -6,4 +6,5 @@ using UnityEngine;
 public class PlayerFactionComponent : MonoBehaviour
 {
     public Faction PlayerFaction;
+    public int DeathPenalty;
 }
