@@ -20,7 +20,6 @@ namespace Assets.Code.Entities
 
         private float attackElapsed;
         private PrefabReferences refs;
-
         private Director director;
 
         void Start()
@@ -32,6 +31,11 @@ namespace Assets.Code.Entities
                 director = directorGo.GetComponent<Director>();
                 director.AddScore(this.Faction);
             }
+        }
+
+        void Update()
+        {
+            
         }
 
         public void RecieveDamage(int damage, GameObject convertTo)
