@@ -2352,25 +2352,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a59dfb28b304fd4bb60fc342b9fc83f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &935095413 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1467662232541808, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
-    type: 2}
-  m_PrefabInternal: {fileID: 957546002}
---- !u!114 &935095425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 935095413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d895ac85a57344affa991a96419b18ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  robotAreaDamageEffectPrefab: {fileID: 0}
-  SecondsBetweenSpecials: 2
-  Faction: 0
 --- !u!1001 &957546002
 Prefab:
   m_ObjectHideFlags: 0
@@ -2410,10 +2391,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114315034876595120, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+    - target: {fileID: 114831595440881418, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
         type: 2}
-      propertyPath: InputType
-      value: 0
+      propertyPath: playerId
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
@@ -2933,6 +2914,11 @@ Prefab:
     - target: {fileID: 4504237469374044, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114005473658169884, guid: ce50bc31c5337ac43b652125f0df6333,
+        type: 2}
+      propertyPath: playerId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}

@@ -270,9 +270,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64936697204347604
@@ -284,9 +284,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!82 &82206075613227086
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d895ac85a57344affa991a96419b18ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotAreaDamageEffectPrefab: {fileID: 1151021898813886, guid: 17f8f6e9810ca4b56889e1b5d72e2856,
+  areaDamageEffectPrefab: {fileID: 1151021898813886, guid: 17f8f6e9810ca4b56889e1b5d72e2856,
     type: 2}
   SecondsBetweenSpecials: 2
   Faction: 0

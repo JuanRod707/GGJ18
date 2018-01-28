@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198255065343791212}
   - component: {fileID: 199605512331335932}
   m_Layer: 0
-  m_Name: Particles area effect
+  m_Name: Bolts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
