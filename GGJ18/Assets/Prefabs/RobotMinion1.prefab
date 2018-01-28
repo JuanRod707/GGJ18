@@ -298,9 +298,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64952442633315570
@@ -312,9 +312,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!65 &65023115699644240
@@ -341,7 +341,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 3ceaaf82e304257489e929d2fff6b148, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -418,11 +418,11 @@ AudioSource:
   m_GameObject: {fileID: 1874038312076230}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 7a9abbb7d65fa8248ac2394079e618f3,
+  OutputAudioMixerGroup: {fileID: 243014080689591128, guid: 7a9abbb7d65fa8248ac2394079e618f3,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 925285dccf5df354ab58edbe06ac425e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.192
   m_Pitch: 1
   Loop: 0
   Mute: 0
