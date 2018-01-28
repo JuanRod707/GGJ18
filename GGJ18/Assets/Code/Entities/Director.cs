@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class Director : MonoBehaviour {
 	public GameObject FinalCanvas;
-	public GameObject PlayerOne;
-	public GameObject PlayerTwo;
+	public GameObject[] Players;
 	public DynamicLabel ScoreMonsters; 
 	public DynamicLabel ScoreRobots; 
 	public DynamicLabel Timer;
@@ -69,8 +68,12 @@ public class Director : MonoBehaviour {
 		theWinner = scorePlayerMonsters == scorePlayerRobots ? "OH! ITS A TIE" : theWinner;
 		WinnerText.SetLabel(theWinner);
 		FinalCanvas.SetActive(true);
-		PlayerOne.SetActive(false);
-		PlayerTwo.SetActive(false);
+
+	    foreach (var p in Players)
+	    {
+	        p.SetActive(false);
+	    }
+
 		Debug.Log("--------------------GAME END--------------------");
 		Debug.Log("--------------------AND THE WINNER IS--------------------");
 		Debug.Log(string.Format("--------------------{0}--------------------", theWinner));

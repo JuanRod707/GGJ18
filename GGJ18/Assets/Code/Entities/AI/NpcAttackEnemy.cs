@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NpcAttackMinion : MonoBehaviour, ReactToMinion
+public class NpcAttackEnemy : MonoBehaviour, ReactToEnemy
 {
     public float AttackRate;
     public int AttackDamage;

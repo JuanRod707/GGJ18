@@ -1,21 +1,22 @@
-﻿using Assets.Code.Entities;
+﻿using System.Linq;
+using Assets.Code.Entities;
 using UnityEngine;
 
 public class DetectProximity : MonoBehaviour {
 
-    public string MinionTag;
+    public string[] EnemyTags;
 
-    private ReactToMinion reactToMinion;
+    private ReactToEnemy reactToEnemy;
 
 	void Start () {
-	    reactToMinion = GetComponentInParent<ReactToMinion>();
+	    reactToEnemy = GetComponentInParent<ReactToEnemy>();
 	}
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!string.IsNullOrEmpty(MinionTag) && other.CompareTag(MinionTag))
+        if (EnemyTags.Contains(other.tag))
         {
-            reactToMinion.React(other.transform);
+            reactToEnemy.React(other.transform);
         }
     }
 }
