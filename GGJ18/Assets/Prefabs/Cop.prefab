@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d160125cea9443dbaf0be3e92b0b7dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRate: 0.9
+  AttackRate: 1.3
   AttackDamage: 1
   DistanceToForget: 3
   Attacksfx: {fileID: 82435112617560288}
@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitPoints: 8
   TimeOfInmortality: 0.5
+  HpBar: {fileID: 0}
 --- !u!136 &136049346677256798
 CapsuleCollider:
   m_ObjectHideFlags: 1

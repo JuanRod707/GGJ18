@@ -14,6 +14,7 @@ public class Director : MonoBehaviour {
 	private int scorePlayerRobots;
 	private int scorePlayerMonsters;
 	private float matchTimer;
+	private bool isGameOver;
 
 	void Start () {
 		scorePlayerRobots = scorePlayerMonsters = 1;
@@ -22,12 +23,15 @@ public class Director : MonoBehaviour {
 		UpdateScore();
 	}
 	void Update(){
-		UpdateTimer();
-		if(matchTimer >= 0)
-			matchTimer -= Time.deltaTime;
-		if(matchTimer < 0  && matchTimer != -100){
-			matchTimer = -100;
-			EndGame();
+		if(!isGameOver)
+		{
+			UpdateTimer();
+			if(matchTimer >= 0)
+				matchTimer -= Time.deltaTime;
+			if(matchTimer < 0){
+				isGameOver = true;
+				EndGame();
+			}
 		}
 	}
 	void UpdateTimer(){
