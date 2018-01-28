@@ -5,12 +5,14 @@ using UnityEngine.AI;
 public class PlayerInputHandler : MonoBehaviour
 {
     private AttackComponent attackComponent;
+    private SpecialComponent specialComponent;
     private NavMeshAgent meshAgent;
     private MovementComponent movementComponent;
     private PlayerIdComponent playerIdComponent;
     private const string verticalAxisTag = "Vertical_P";
     private const string horizontalAxisTag = "Horizontal_P";
     private const string attackButtonTag = "Attack_P";
+    private const string specialButtonTag = "Special_P";
 
     public enum InputTypeEnum
     {
@@ -26,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviour
         attackComponent = GetComponent<AttackComponent>();
         movementComponent = GetComponent<MovementComponent>();
         playerIdComponent = GetComponent<PlayerIdComponent>();
+        specialComponent = GetComponent<SpecialComponent>();
         if (playerIdComponent == null)
         {
             throw new ArgumentNullException("PlayerIdComponent is not assigned to player");
@@ -36,6 +39,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         HandleMovementInput();
         HandleAttackInput();
+        HandleSpecialInput();
     }
 
     private void HandleMovementInput()
@@ -95,13 +99,25 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void HandleAttackInput()
     {
-        if (movementComponent == null)
+        if (attackComponent == null)
         {
-            Debug.LogError("Movement component is not attached to game object.");
+            Debug.LogError("Attack component is not attached to game object.");
         }
         if (Input.GetButtonDown(attackButtonTag + playerIdComponent.PlayerId))
         {
             attackComponent.AttemptAttack();
+        }
+    }
+
+    private void HandleSpecialInput()
+    {
+        if (specialComponent == null)
+        {
+            Debug.LogError("Special component is not attached to game object.");
+        }
+        if (Input.GetButtonDown(specialButtonTag + playerIdComponent.PlayerId))
+        {
+            specialComponent.AttemptSpecial();
         }
     }
 }

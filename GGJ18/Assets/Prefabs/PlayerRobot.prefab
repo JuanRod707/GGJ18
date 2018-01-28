@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114084209088041182}
   - component: {fileID: 114986267509248078}
   - component: {fileID: 114734120462566402}
+  - component: {fileID: 114364811570788290}
   m_Layer: 0
   m_Name: PlayerRobot
   m_TagString: Player
@@ -238,9 +239,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64936697204347604
@@ -252,9 +253,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 1
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!82 &82172093090293004
@@ -396,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c513a6f883d8c1f419e30326f3fa74f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputType: 1
+  InputType: 0
 --- !u!114 &114201493682117208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,6 +407,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf92bdea682645c4487e8c6b3cdd7307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114364811570788290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103965940981254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d895ac85a57344affa991a96419b18ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114525314043845886
