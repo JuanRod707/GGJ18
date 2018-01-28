@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed0d1902651cd4281611cad4fa119c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitTimeToGenerate: 15
-  MaxTimeGenerate: 15
-  MinTimeGenerate: 10
+  InitTimeToGenerate: 4
+  MaxTimeGenerate: 6
+  MinTimeGenerate: 3
   canBeSpawned:
   - Cop
   - Npc

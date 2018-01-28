@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babe00945963d8040a341c0977146e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 10
+  HitPoints: 30
   TimeOfInmortality: 1
 --- !u!114 &114212009054704270
 MonoBehaviour:
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f530aee5a584b749c88c7bdfdc92fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 1
+  Damage: 6
 --- !u!114 &114563974563622664
 MonoBehaviour:
   m_ObjectHideFlags: 1
