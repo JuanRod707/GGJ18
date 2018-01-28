@@ -7,8 +7,10 @@ using UnityEngine;
 public class AreaDamageEffect : MonoBehaviour
 {
     public List<GameObject> EntitiesInsideTrigger;
-    public float SecondsBeforeEffectStarts = 1;
+    public float SecondsBeforeEffectStarts;
     public AudioSource SpecialSfx;
+    public GameObject ParticleEffects;
+    public int ParticleEffectDurationInSeconds;
     public int Damage;
     public GameObject FactionPrefab;
     public Faction Faction;
@@ -23,6 +25,7 @@ public class AreaDamageEffect : MonoBehaviour
     {
         yield return new WaitForSeconds(SecondsBeforeEffectStarts);
         SpecialSfx.Play();
+        GenerateParticleEffects();
         EntitiesInsideTrigger.RemoveAll(x => x == null);
         foreach (var entity in EntitiesInsideTrigger)
         {
@@ -35,6 +38,18 @@ public class AreaDamageEffect : MonoBehaviour
             }
         }
         EntitiesInsideTrigger.Clear();
+    }
+
+    private void GenerateParticleEffects()
+    {
+        var particleEffects = Instantiate(ParticleEffects, this.transform.position, Quaternion.identity);
+        StartCoroutine(DestructParticleEffectsSystem(particleEffects));
+    }
+
+    private IEnumerator DestructParticleEffectsSystem(GameObject particleEffects)
+    {
+        yield return new WaitForSeconds(ParticleEffectDurationInSeconds);
+        Destroy(particleEffects);
     }
 
     private bool IsEntityEnemyMinion(GameObject entity)

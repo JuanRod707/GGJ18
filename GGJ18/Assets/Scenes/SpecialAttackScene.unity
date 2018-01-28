@@ -2368,8 +2368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d895ac85a57344affa991a96419b18ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotAreaDamageEffectPrefab: {fileID: 0}
   SecondsBetweenSpecials: 2
-  SpecialSfx: {fileID: 0}
+  Faction: 0
 --- !u!1001 &957546002
 Prefab:
   m_ObjectHideFlags: 0

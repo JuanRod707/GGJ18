@@ -178,8 +178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntitiesInsideTrigger: []
-  SecondsBeforeEffectStarts: 2
+  SecondsBeforeEffectStarts: 0
   SpecialSfx: {fileID: 82896804398503138}
+  ParticleEffects: {fileID: 1091653506525260, guid: 730b3059fe9264fffbea6f4d6fccc313,
+    type: 2}
+  ParticleEffectDurationInSeconds: 1
   Damage: 4
   FactionPrefab: {fileID: 1432947716186390, guid: 14150a7373ef06d43ae9d8f3ef3747f3,
     type: 2}
