@@ -4,6 +4,7 @@ public class HealthComponent : MonoBehaviour, Damageable
 {
     public int HitPoints;
     public float TimeOfInmortality;
+    public bool IsAlive { get{return HitPoints>0;} }
 
     private float timerInmortality;
     private int saveHitPoints;

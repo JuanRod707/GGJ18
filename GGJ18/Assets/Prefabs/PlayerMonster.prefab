@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 114417080719244456}
   - component: {fileID: 114842277668635614}
   - component: {fileID: 114207183345070592}
+  - component: {fileID: 114504546911959188}
   m_Layer: 0
   m_Name: PlayerMonster
   m_TagString: Player
@@ -268,9 +269,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64801827108340504
@@ -282,9 +283,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 383a32e4b97abbe44b584a747b38c76a, type: 3}
 --- !u!82 &82988383127574782
@@ -442,6 +443,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 6
+--- !u!114 &114504546911959188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467662232541808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ce0c5e1872665458c440d2363556cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToRespawn: 5
+  PointSpawnPlayer: {fileID: 0}
 --- !u!114 &114563974563622664
 MonoBehaviour:
   m_ObjectHideFlags: 1
