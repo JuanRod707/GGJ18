@@ -11,6 +11,7 @@ public class DynamicLabel : MonoBehaviour {
 	}
 	
 	public void SetLabel(params object[] values){
+		myText = myText == null ? this.GetComponent<Text>() : myText;
 		myText.text = string.Format(Format, values);
 	}
 }

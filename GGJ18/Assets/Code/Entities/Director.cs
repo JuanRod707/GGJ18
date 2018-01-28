@@ -3,10 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Director : MonoBehaviour {
-
+	public GameObject FinalCanvas;
+	public GameObject PlayerOne;
+	public GameObject PlayerTwo;
 	public DynamicLabel ScoreMonsters; 
 	public DynamicLabel ScoreRobots; 
 	public DynamicLabel Timer;
+	public DynamicLabel WinnerText; 
 	public float MatchLength;
 	private int scorePlayerRobots;
 	private int scorePlayerMonsters;
@@ -20,7 +23,8 @@ public class Director : MonoBehaviour {
 	}
 	void Update(){
 		UpdateTimer();
-		matchTimer -= Time.deltaTime;
+		if(matchTimer >= 0)
+			matchTimer -= Time.deltaTime;
 		if(matchTimer < 0){
 			EndGame();
 		}
@@ -62,7 +66,11 @@ public class Director : MonoBehaviour {
 	private void EndGame(){
 		string theWinner ="";
 		theWinner = scorePlayerMonsters > scorePlayerRobots ? "THE MONSTERS!!!" : "THE ROBOTS!!!";
-		theWinner = scorePlayerMonsters == scorePlayerRobots ? "ITS A TIE" : theWinner;
+		theWinner = scorePlayerMonsters == scorePlayerRobots ? "OH! ITS A TIE" : theWinner;
+		WinnerText.SetLabel(theWinner);
+		FinalCanvas.SetActive(true);
+		PlayerOne.SetActive(false);
+		PlayerTwo.SetActive(false);
 		Debug.Log("--------------------GAME END--------------------");
 		Debug.Log("--------------------AND THE WINNER IS--------------------");
 		Debug.Log(string.Format("--------------------{0}--------------------", theWinner));
