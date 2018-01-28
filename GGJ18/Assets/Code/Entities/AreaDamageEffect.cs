@@ -9,8 +9,9 @@ public class AreaDamageEffect : MonoBehaviour
     public List<GameObject> EntitiesInsideTrigger;
     public float SecondsBeforeEffectStarts;
     public AudioSource SpecialSfx;
-    public GameObject ParticleEffects;
-    public int ParticleEffectDurationInSeconds;
+    public List<GameObject> ParticleEffects;
+    public float ParticleEffectDurationInSeconds;
+    public float EffectDuration;
     public int Damage;
     public GameObject FactionPrefab;
     public Faction Faction;
@@ -38,12 +39,17 @@ public class AreaDamageEffect : MonoBehaviour
             }
         }
         EntitiesInsideTrigger.Clear();
+        yield return new WaitForSeconds(EffectDuration);
+        Destroy(this.gameObject);
     }
 
     private void GenerateParticleEffects()
     {
-        var particleEffects = Instantiate(ParticleEffects, this.transform.position, Quaternion.identity);
-        StartCoroutine(DestructParticleEffectsSystem(particleEffects));
+        foreach (var particleEffect in ParticleEffects)
+        {
+            var newParticleEffect = Instantiate(particleEffect, this.transform.position, Quaternion.identity);
+            StartCoroutine(DestructParticleEffectsSystem(newParticleEffect));
+        }
     }
 
     private IEnumerator DestructParticleEffectsSystem(GameObject particleEffects)
