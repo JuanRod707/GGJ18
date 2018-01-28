@@ -1,9 +1,10 @@
-﻿using Assets.Code.Entities;
+﻿using System.Linq;
+using Assets.Code.Entities;
 using UnityEngine;
 
 public class DetectNpc : MonoBehaviour {
 
-    public string RunToTag;
+    public string[] TagsToChase;
 
     private Minion myMinion;
     private ChaseNpc chaseNpc;
@@ -16,16 +17,30 @@ public class DetectNpc : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(RunToTag))
+        if (TagsToChase.Contains(other.tag))
         {
-            chaseNpc.StartChasing(other.transform);
-        }
-        else if (other.CompareTag("Minion"))
-        {
+            var chase = true;
             var minion = other.GetComponentInParent<Minion>();
-            if (minion.Faction != myMinion.Faction)
+            var player = other.GetComponentInParent<PlayerFactionComponent>();
+
+            if (minion != null)
             {
-                chaseNpc.StartChasing(other.transform);
+                if (minion.Faction == myMinion.Faction)
+                {
+                    chase = false;
+                }
+            }
+            else if (player != null)
+            {
+                if (player.PlayerFaction == myMinion.Faction)
+                {
+                    chase = false;
+                }
+            }
+
+            if (chase)
+            {
+                chaseNpc.StartChasing(other.transform.parent);
             }
         }
     }

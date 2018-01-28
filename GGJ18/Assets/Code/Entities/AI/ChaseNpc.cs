@@ -4,12 +4,12 @@ using UnityEngine.AI;
 public class ChaseNpc : MonoBehaviour
 {
     public float ForgetDistance;
+    public Color LineColor;
 
     private NpcRandomMovement randomMovement;
     private NavMeshAgent navAgent;
     private Transform runToPosition;
-
-
+    
     void ReloadComponents()
     {
         if(randomMovement == null)
@@ -30,6 +30,8 @@ public class ChaseNpc : MonoBehaviour
             {
                 navAgent.SetDestination(runToPosition.position);
             }
+
+            Debug.DrawLine(this.transform.position, runToPosition.position, LineColor);
         }
         else
         {
