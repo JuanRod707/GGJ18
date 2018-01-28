@@ -28,20 +28,28 @@ public class AreaDamageEffect : MonoBehaviour
         {
             var isNpc = entity.CompareTag(Constants.tagNpcs) ||
                         entity.transform.parent.CompareTag(Constants.tagNpcs);
-            var minionComponent = entity.GetComponent<Minion>() ?? entity.GetComponentInParent<Minion>();
-            var isMinion = minionComponent != null;
-            var isEnemyMinion = isMinion && minionComponent.Faction != Faction;
-            Debug.Log(string.Format("isNpc is {0}", isNpc.ToString()));
-            Debug.Log(string.Format("isEnemyMinion is {0}", isEnemyMinion.ToString()));
+            var isEnemyMinion = IsEntityEnemyMinion(entity);
             if (isNpc || isEnemyMinion)
             {
-                var damageable = entity.GetComponent<Damageable>() ??
-                                 entity.GetComponentInParent<Damageable>();
-                if (damageable == null) Debug.Log("TODO MAL VIEJO");
-                damageable.RecieveDamage(Damage, FactionPrefab);
+                InflictDamageOnEntity(entity);
             }
         }
         EntitiesInsideTrigger.Clear();
+    }
+
+    private bool IsEntityEnemyMinion(GameObject entity)
+    {
+        var minionComponent = entity.GetComponent<Minion>() ?? entity.GetComponentInParent<Minion>();
+        var isMinion = minionComponent != null;
+        var isEnemyMinion = isMinion && minionComponent.Faction != Faction;
+        return isEnemyMinion;
+    }
+
+    private void InflictDamageOnEntity(GameObject entity)
+    {
+        var damageable = entity.GetComponent<Damageable>() ??
+                         entity.GetComponentInParent<Damageable>();
+        damageable.RecieveDamage(Damage, FactionPrefab);
     }
 
     private void OnTriggerEnter(Collider other)
