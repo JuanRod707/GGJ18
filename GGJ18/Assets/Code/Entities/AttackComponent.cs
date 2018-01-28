@@ -2,10 +2,12 @@
 
 public class AttackComponent : MonoBehaviour
 {
+    public GameObject FactionPrefab;
+    public AudioSource AttackSfx;
+
     private EntityDetector entityDetector;
     private MeleeDamageComponent meleeDamageComponent;
-    public GameObject FactionPrefab;
-
+    
     private void Start()
     {
         entityDetector = GetComponentInChildren<EntityDetector>();
@@ -24,8 +26,7 @@ public class AttackComponent : MonoBehaviour
         {
             foreach (var entity in entityDetector.EntitiesInsideTrigger)
             {
-                var damageableComponent =
-                    entity.GetComponentInParent<Damageable>() ?? entity.GetComponent<Damageable>();
+                var damageableComponent = entity.GetComponentInParent<Damageable>() ?? entity.GetComponent<Damageable>();
                 if (entity.CompareTag(Constants.tagPlayer))
                 {
                     damageableComponent.RecieveDamage(meleeDamageComponent.Damage);
@@ -35,6 +36,8 @@ public class AttackComponent : MonoBehaviour
                     damageableComponent.RecieveDamage(meleeDamageComponent.Damage, FactionPrefab);
                 }
             }
+
+            AttackSfx.Play();
         }
     }
 }
