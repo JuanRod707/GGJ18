@@ -5538,7 +5538,7 @@ MonoBehaviour:
   ScoreRobots: {fileID: 1293178150}
   Timer: {fileID: 1754991621}
   WinnerText: {fileID: 257377138}
-  MatchLength: 5
+  MatchLength: 90
 --- !u!4 &1659399421
 Transform:
   m_ObjectHideFlags: 0
