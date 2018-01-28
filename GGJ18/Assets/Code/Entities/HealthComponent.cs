@@ -6,6 +6,7 @@ public class HealthComponent : MonoBehaviour, Damageable
     public float TimeOfInmortality;
 
     private float timerInmortality;
+    private int saveHitPoints;
 
     public void RecieveDamage(int damage, GameObject convertTo)
     {
@@ -19,6 +20,7 @@ public class HealthComponent : MonoBehaviour, Damageable
     private void Start()
     {
         timerInmortality = 0;
+        saveHitPoints = HitPoints;
     }
 
     void Update()
@@ -39,10 +41,10 @@ public class HealthComponent : MonoBehaviour, Damageable
         if (timerInmortality <= 0)
         {
             HitPoints -= damage;
-            Debug.Log(string.Format("ReceiveDamage2::Health is currently {0}", this.HitPoints));
             if (HitPoints <= 0)
             {
                 Destroy(this.gameObject);
+                
             }
             RestartTimer();
         }
