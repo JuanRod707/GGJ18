@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ce0c5e1872665458c440d2363556cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToRespawn: 5
+  TimeToRespawn: 3
   PointSpawnPlayer: {fileID: 0}
 --- !u!114 &114563974563622664
 MonoBehaviour:

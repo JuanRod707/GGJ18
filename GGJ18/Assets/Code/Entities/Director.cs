@@ -1,4 +1,5 @@
-﻿using Assets.Code.Helpers;
+﻿using System.Collections;
+using Assets.Code.Helpers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,7 +63,13 @@ public class Director : MonoBehaviour {
 
 		UpdateScore();
 	}
-	private void EndGame(){
+
+    public void StartRespawnRoutine(RespawnAction playerToRespawn, float delay)
+    {
+        StartCoroutine(DelayedRespawn(playerToRespawn, delay));
+    }
+
+    private void EndGame(){
 		string theWinner ="";
 		theWinner = scorePlayerMonsters > scorePlayerRobots ? "THE MONSTERS!!!" : "THE ROBOTS!!!";
 		theWinner = scorePlayerMonsters == scorePlayerRobots ? "OH! ITS A TIE" : theWinner;
@@ -78,4 +85,15 @@ public class Director : MonoBehaviour {
 		Debug.Log("--------------------AND THE WINNER IS--------------------");
 		Debug.Log(string.Format("--------------------{0}--------------------", theWinner));
 	}
+
+    private IEnumerator DelayedRespawn(RespawnAction playerToRespawn, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        RespawnPlayer(playerToRespawn);
+    }
+
+    private void RespawnPlayer(RespawnAction playerToRespawn)
+    {
+        playerToRespawn.Respawn();
+    }
 }

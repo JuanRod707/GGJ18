@@ -5,30 +5,18 @@ using UnityEngine;
 public class RespawnAction : MonoBehaviour {
 
 public float TimeToRespawn;
-	public GameObject PointSpawnPlayer;
-
-	private HealthComponent health;
-	void Start () {
-		health = this.GetComponent<HealthComponent>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(!health.IsAlive)
-		{
-			StartCountdownSpawn();
-			SendMeToHeaven();
-		}
-	}
-	private IEnumerator StartCountdownSpawn(){
-		yield return new WaitForSeconds(TimeToRespawn);
-		RespawnPlayer();
-	}
-	private void RespawnPlayer(){
+	public Transform PointSpawnPlayer;
+    
+	public void Respawn(){
 		this.gameObject.SetActive(true);
-		this.gameObject.transform.position = PointSpawnPlayer.transform.position;
+		this.gameObject.transform.position = PointSpawnPlayer.position;
+	    this.GetComponent<HealthComponent>().FullHeal();
 	}
-	private void SendMeToHeaven(){
-		this.gameObject.SetActive(false);
-	}
+
+	public void Kill()
+	{
+	    var dir = GameObject.Find("Director").GetComponent<Director>();
+	    dir.StartRespawnRoutine(this, TimeToRespawn);
+	    this.gameObject.SetActive(false);
+    }
 }

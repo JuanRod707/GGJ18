@@ -4,15 +4,15 @@ public class HealthComponent : MonoBehaviour, Damageable
 {
     public int HitPoints;
     public float TimeOfInmortality;
-    public bool IsAlive { get{return HitPoints>0;} }
+    public bool IsAlive { get{return currentHitpoints > 0;} }
 
+    private int currentHitpoints;
     private float timerInmortality;
-    private int saveHitPoints;
 
     public void RecieveDamage(int damage, GameObject convertTo)
     {
-        HitPoints -= damage;
-        if (HitPoints <= 0 && this.CompareTag(Constants.tagNpcs))
+        currentHitpoints -= damage;
+        if (currentHitpoints <= 0 && this.CompareTag(Constants.tagNpcs))
         {
             Convert(convertTo);
         }
@@ -21,7 +21,7 @@ public class HealthComponent : MonoBehaviour, Damageable
     private void Start()
     {
         timerInmortality = 0;
-        saveHitPoints = HitPoints;
+        FullHeal();
     }
 
     void Update()
@@ -44,11 +44,22 @@ public class HealthComponent : MonoBehaviour, Damageable
             HitPoints -= damage;
             if (HitPoints <= 0)
             {
-                Destroy(this.gameObject);
-                
+                if (GetComponent<PlayerFactionComponent>() != null)
+                {
+                    GetComponent<RespawnAction>().Kill();
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
             RestartTimer();
         }
+    }
+
+    public void FullHeal()
+    {
+        currentHitpoints = HitPoints;
     }
 
     public void Convert(GameObject convertTo)
