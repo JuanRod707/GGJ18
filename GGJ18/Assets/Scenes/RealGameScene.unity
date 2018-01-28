@@ -1922,7 +1922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -333, y: 0}
+  m_AnchoredPosition: {x: -374, y: 27}
   m_SizeDelta: {x: 335, y: 149}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &485036029
@@ -3118,6 +3118,11 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 1440428264}
+    - target: {fileID: 195923959244628510, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+        type: 2}
+      propertyPath: m_Speed
+      value: 0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
   m_IsPrefabParent: 0
@@ -3785,7 +3790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 10}
+  m_AnchoredPosition: {x: -50, y: 10}
   m_SizeDelta: {x: 502, y: 197}
   m_Pivot: {x: 1, y: 0}
 --- !u!1001 &1125667541
@@ -3842,6 +3847,11 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 294831375}
+    - target: {fileID: 195695624256310264, guid: ce50bc31c5337ac43b652125f0df6333,
+        type: 2}
+      propertyPath: m_Speed
+      value: 0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}
   m_IsPrefabParent: 0
@@ -4733,8 +4743,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal_P1
+  m_VerticalAxis: Vertical_P1
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -5483,7 +5493,7 @@ MonoBehaviour:
   ScoreRobots: {fileID: 1293178150}
   Timer: {fileID: 1754991621}
   WinnerText: {fileID: 257377138}
-  MatchLength: 90
+  MatchLength: 45
 --- !u!4 &1659399421
 Transform:
   m_ObjectHideFlags: 0
@@ -6988,6 +6998,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 100, y: 10}
+  m_AnchoredPosition: {x: 50, y: 10}
   m_SizeDelta: {x: 502, y: 197}
   m_Pivot: {x: 0, y: 0}

@@ -8,7 +8,7 @@ public class HealthComponent : MonoBehaviour, Damageable
     public bool IsAlive { get{return currentHitpoints > 0;} }
     public Image HpBar;
 
-    private int currentHitpoints;
+    public int currentHitpoints;
     private float timerInmortality;
 
     public void RecieveDamage(int damage, GameObject convertTo)

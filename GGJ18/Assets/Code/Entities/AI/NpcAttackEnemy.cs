@@ -58,12 +58,17 @@ public class NpcAttackEnemy : MonoBehaviour, ReactToEnemy
     {
         if (target != null)
         {
-            target.GetComponentInParent<Damageable>().RecieveDamage(AttackDamage);
-            Attacksfx.pitch = Random.Range(0.5f, 2f);
-            Attacksfx.Play();
+            var dmg = target.GetComponentInParent<Damageable>();
+            if (dmg != null)
+            {
+                dmg.RecieveDamage(AttackDamage);
+                Attacksfx.pitch = Random.Range(0.5f, 2f);
+                Attacksfx.Play();
 
-            var line = Instantiate(ShotLinePf, this.transform.position, Quaternion.identity);
-            line.GetComponent<ShotLine>().DrawLine(transform.position + (Vector3.up * ShootOffset), target.position + (Vector3.up * ShootOffset));
+                var line = Instantiate(ShotLinePf, this.transform.position, Quaternion.identity);
+                line.GetComponent<ShotLine>().DrawLine(transform.position + (Vector3.up * ShootOffset),
+                    target.position + (Vector3.up * ShootOffset));
+            }
         }
     }
 }

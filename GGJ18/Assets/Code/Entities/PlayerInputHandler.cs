@@ -44,10 +44,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         HandleMovementInput();
         HandleAttackInput();
-        if (playerIdComponent.PlayerId == 1)
-        {
-            HandleSpecialInput();
-        }
+        HandleSpecialInput();
     }
 
     private void HandleMovementInput()
