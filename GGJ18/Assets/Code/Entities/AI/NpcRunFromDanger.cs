@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NpcRunFromDanger : MonoBehaviour, ReactToMinion
+public class NpcRunFromDanger : MonoBehaviour, ReactToEnemy
 {
     public float MinApproach;
     public float RunSafeDistance;

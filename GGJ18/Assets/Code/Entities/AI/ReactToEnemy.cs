@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Code.Entities
 {
-    public interface ReactToMinion
+    public interface ReactToEnemy
     {
         void React(Transform fromPos);
     }
