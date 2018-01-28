@@ -11,7 +11,7 @@ public class Director : MonoBehaviour {
 	private int scorePlayerMonsters;
 
 	void Start () {
-		scorePlayerRobots = scorePlayerMonsters = 0;
+		scorePlayerRobots = scorePlayerMonsters = 1;
 		UpdateScore();
 	}
 
@@ -21,8 +21,29 @@ public class Director : MonoBehaviour {
 	}
 
 	public void AddScore(Faction fac){
-		scorePlayerMonsters = fac == Faction.Monsters ? scorePlayerMonsters++ : scorePlayerMonsters;
-		scorePlayerRobots = fac == Faction.Robot ? scorePlayerRobots++ : scorePlayerRobots;
+		switch (fac){
+			case Faction.Monsters:
+				scorePlayerMonsters++;
+			break;
+			case Faction.Robot:
+				scorePlayerRobots++;
+			break;
+
+		}
+
+		UpdateScore();
+	}
+	public void SubstractScore(Faction fac){
+		switch (fac){
+			case Faction.Monsters:
+				scorePlayerMonsters--;
+			break;
+			case Faction.Robot:
+				scorePlayerRobots--;
+			break;
+
+		}
+
 		UpdateScore();
 	}
 }

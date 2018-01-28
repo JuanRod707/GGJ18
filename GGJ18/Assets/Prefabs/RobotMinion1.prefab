@@ -448,6 +448,7 @@ MonoBehaviour:
   AttackRate: 0.3
   ConvertToId: RobMin1
   RefName: Refs
+  DirectorName: Director
   PunchSfx: {fileID: 82693049792836294}
 --- !u!136 &136698963938819478
 CapsuleCollider:
