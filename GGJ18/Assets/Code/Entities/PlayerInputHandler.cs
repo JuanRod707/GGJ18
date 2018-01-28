@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class PlayerInputHandler : MonoBehaviour
 {
+    public ButtonPressEfect InputMeleeAtack;
+    public ButtonPressEfect InputSpecialAttack;
     private AttackComponent attackComponent;
     private SpecialComponent specialComponent;
     private NavMeshAgent meshAgent;
@@ -108,6 +110,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         if (Input.GetButtonDown(attackButtonTag + playerIdComponent.PlayerId))
         {
+            InputMeleeAtack.PressButton();
             attackComponent.AttemptAttack();
         }
     }
@@ -120,6 +123,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         if (Input.GetButtonDown(specialButtonTag + playerIdComponent.PlayerId))
         {
+            InputSpecialAttack.PressButton();
             specialComponent.AttemptSpecial();
         }
     }
