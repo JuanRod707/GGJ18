@@ -25,7 +25,8 @@ public class Director : MonoBehaviour {
 		UpdateTimer();
 		if(matchTimer >= 0)
 			matchTimer -= Time.deltaTime;
-		if(matchTimer < 0){
+		if(matchTimer < 0  && matchTimer != -100){
+			matchTimer = -100;
 			EndGame();
 		}
 	}

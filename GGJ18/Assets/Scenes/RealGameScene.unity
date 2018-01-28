@@ -1717,6 +1717,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6e4d1c4102a6a469e470d7bc0b6f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &420505022 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1103965940981254, guid: ce50bc31c5337ac43b652125f0df6333,
+    type: 2}
+  m_PrefabInternal: {fileID: 1125667541}
 --- !u!4 &438233120 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4134095407251610, guid: 1a59dfb28b304fd4bb60fc342b9fc83f,
@@ -2182,6 +2187,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 518781640}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &520774279 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1467662232541808, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+    type: 2}
+  m_PrefabInternal: {fileID: 957546002}
 --- !u!1001 &526906673
 Prefab:
   m_ObjectHideFlags: 0
@@ -3128,6 +3138,11 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 1440428264}
+    - target: {fileID: 114207183345070592, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+        type: 2}
+      propertyPath: HitPoints
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
   m_IsPrefabParent: 0
@@ -3850,7 +3865,7 @@ Prefab:
     - target: {fileID: 114734120462566402, guid: ce50bc31c5337ac43b652125f0df6333,
         type: 2}
       propertyPath: HitPoints
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114986267509248078, guid: ce50bc31c5337ac43b652125f0df6333,
         type: 2}
@@ -3877,6 +3892,11 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 294831375}
+    - target: {fileID: 114005473658169884, guid: ce50bc31c5337ac43b652125f0df6333,
+        type: 2}
+      propertyPath: playerId
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}
   m_IsPrefabParent: 0
@@ -5511,12 +5531,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalCanvas: {fileID: 1575123170}
-  Players: []
+  Players:
+  - {fileID: 420505022}
+  - {fileID: 520774279}
   ScoreMonsters: {fileID: 1448320383}
   ScoreRobots: {fileID: 1293178150}
   Timer: {fileID: 1754991621}
   WinnerText: {fileID: 257377138}
-  MatchLength: 120
+  MatchLength: 5
 --- !u!4 &1659399421
 Transform:
   m_ObjectHideFlags: 0
