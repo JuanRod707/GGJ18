@@ -51,8 +51,11 @@ public class HealthComponent : MonoBehaviour, Damageable
 
         if (currentHitpoints <= 0)
             {
-                if (GetComponent<PlayerFactionComponent>() != null)
+                var playerComp = GetComponent<PlayerFactionComponent>();
+                if (playerComp != null)
                 {
+                    GameObject.Find("NPCs").GetComponent<DestroyMyMinions>()
+                        .DestroyMinions(playerComp.PlayerFaction, playerComp.DeathPenalty);
                     GetComponent<RespawnAction>().Kill();
                 }
                 else

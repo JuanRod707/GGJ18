@@ -5398,6 +5398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FinalCanvas: {fileID: 1575123170}
   Players: []
+  Npcs: {fileID: 401535279}
   ScoreMonsters: {fileID: 1448320383}
   ScoreRobots: {fileID: 1293178150}
   Timer: {fileID: 1754991621}
