@@ -5,6 +5,7 @@ public class SpecialComponent : MonoBehaviour
     private AreaDamageEffect areaDamageEffect;
     public float SecondsBetweenSpecials = 2.0f;
     private float timeSinceLastSpecial;
+    public AudioSource SpecialSfx;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class SpecialComponent : MonoBehaviour
                 timeSinceLastSpecial = 0.0f;
 
                 areaDamageEffect.ActivateEffect();
+                SpecialSfx.Play();
             }
         }
     }
