@@ -3118,6 +3118,11 @@ Prefab:
       propertyPath: PointSpawnPlayer
       value: 
       objectReference: {fileID: 1797804716}
+    - target: {fileID: 212037949685359620, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
   m_IsPrefabParent: 0
@@ -3842,6 +3847,11 @@ Prefab:
       propertyPath: PointSpawnPlayer
       value: 
       objectReference: {fileID: 1657295922}
+    - target: {fileID: 212358374985064264, guid: ce50bc31c5337ac43b652125f0df6333,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}
   m_IsPrefabParent: 0
