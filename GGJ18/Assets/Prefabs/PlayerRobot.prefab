@@ -341,7 +341,7 @@ AudioSource:
   m_GameObject: {fileID: 1466450948485212}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 7a9abbb7d65fa8248ac2394079e618f3,
+  OutputAudioMixerGroup: {fileID: 243014080689591128, guid: 7a9abbb7d65fa8248ac2394079e618f3,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: e7727bae28bd54e54989c9a8790c0f68, type: 3}
   m_PlayOnAwake: 0
@@ -422,7 +422,7 @@ AudioSource:
   m_GameObject: {fileID: 1990417648958360}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 7a9abbb7d65fa8248ac2394079e618f3,
+  OutputAudioMixerGroup: {fileID: 243014080689591128, guid: 7a9abbb7d65fa8248ac2394079e618f3,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 44d2a39483fe41649b0b9febef765af1, type: 3}
   m_PlayOnAwake: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7376fa449b9054193870a8cd034fed6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.05
+  MoveSpeed: 0.02
 --- !u!114 &114986267509248078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -664,8 +664,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 0.1
-  m_Acceleration: 1
+  m_Speed: 0.04
+  m_Acceleration: 0.1
   avoidancePriority: 50
   m_AngularSpeed: 1000
   m_StoppingDistance: 0.1
