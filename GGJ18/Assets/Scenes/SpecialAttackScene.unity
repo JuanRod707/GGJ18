@@ -2394,8 +2394,14 @@ Prefab:
     - target: {fileID: 114831595440881418, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
         type: 2}
       propertyPath: playerId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114844337315277530, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+        type: 2}
+      propertyPath: areaDamageEffectPrefab
+      value: 
+      objectReference: {fileID: 1452956436454294, guid: 49d512d3e0d8544a692d10f6fe960e74,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
   m_IsPrefabParent: 0
@@ -2918,7 +2924,7 @@ Prefab:
     - target: {fileID: 114005473658169884, guid: ce50bc31c5337ac43b652125f0df6333,
         type: 2}
       propertyPath: playerId
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}

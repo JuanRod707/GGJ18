@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerFaction: 1
+  DeathPenalty: 0
 --- !u!114 &114844337315277530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -648,9 +649,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d895ac85a57344affa991a96419b18ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaDamageEffectPrefab: {fileID: 1151021898813886, guid: 49d512d3e0d8544a692d10f6fe960e74,
+  areaDamageEffectPrefab: {fileID: 1452956436454294, guid: 49d512d3e0d8544a692d10f6fe960e74,
     type: 2}
-  SecondsBetweenSpecials: 2
+  SecondsBetweenSpecials: 4
   Faction: 1
 --- !u!114 &114857341679523692
 MonoBehaviour:
@@ -800,7 +801,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1187013206560148}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: -1.02}
+  m_LocalPosition: {x: 0, y: -0.8540726, z: -1.02}
   m_LocalScale: {x: 0.012, y: 0.012, z: 2}
   m_Children:
   - {fileID: 224172871980857850}
