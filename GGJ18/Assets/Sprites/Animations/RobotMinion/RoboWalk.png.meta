@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 9877a528d1af8174da4902898a24e66d
-timeCreated: 1517164524
+guid: 67b59167a4d371c459b5c5c6b2255af8
+timeCreated: 1517163793
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: caminata lateral insecto_0
-    21300002: caminata lateral insecto_1
-    21300004: caminata lateral insecto_2
-    21300006: caminata lateral insecto_3
-    21300008: caminata lateral insecto_4
-    21300010: caminata lateral insecto_5
-    21300012: caminata lateral insecto_6
+    21300000: RoboWalk_0
+    21300002: RoboWalk_1
+    21300004: RoboWalk_2
+    21300006: RoboWalk_3
+    21300008: RoboWalk_4
+    21300010: RoboWalk_5
+    21300012: RoboWalk_6
+    21300014: RoboWalk_7
+    21300016: RoboWalk_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -97,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caminata lateral insecto_0
+      name: RoboWalk_0
       rect:
         serializedVersion: 2
-        x: 91
-        y: 3352
-        width: 621
-        height: 744
+        x: 0
+        y: 856
+        width: 223
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,13 +113,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_1
+      name: RoboWalk_1
       rect:
         serializedVersion: 2
-        x: 875
-        y: 3352
-        width: 736
-        height: 736
+        x: 243
+        y: 853
+        width: 224
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,13 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_2
+      name: RoboWalk_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 2607
-        width: 816
-        height: 726
+        x: 0
+        y: 661
+        width: 224
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,13 +141,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_3
+      name: RoboWalk_3
       rect:
         serializedVersion: 2
-        x: 835
-        y: 2605
-        width: 844
-        height: 726
+        x: 244
+        y: 661
+        width: 226
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_4
+      name: RoboWalk_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1861
-        width: 829
-        height: 731
+        x: 0
+        y: 470
+        width: 226
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_5
+      name: RoboWalk_5
       rect:
         serializedVersion: 2
-        x: 857
-        y: 1863
-        width: 784
-        height: 730
+        x: 244
+        y: 470
+        width: 226
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,13 +183,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: caminata lateral insecto_6
+      name: RoboWalk_6
       rect:
         serializedVersion: 2
-        x: 49
-        y: 1120
-        width: 706
-        height: 737
+        x: 0
+        y: 276
+        width: 228
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RoboWalk_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 277
+        width: 228
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RoboWalk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 227
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

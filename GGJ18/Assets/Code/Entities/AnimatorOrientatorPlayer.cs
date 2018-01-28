@@ -34,11 +34,11 @@ public class AnimatorOrientatorPlayer : MonoBehaviour
             faceDir = 1;
             if (input.x > 0)
             {
-                sprite.flipX = true;
+                sprite.flipX = false;
             }
             else
             {
-                sprite.flipX = false;
+                sprite.flipX = true;
             }
         }
 

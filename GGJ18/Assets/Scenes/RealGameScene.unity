@@ -3103,6 +3103,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114504546911959188, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
+        type: 2}
+      propertyPath: PointSpawnPlayer
+      value: 
+      objectReference: {fileID: 1797804716}
     - target: {fileID: 114315034876595120, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
         type: 2}
       propertyPath: InputMeleeAtack
@@ -3113,11 +3118,6 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 1440428264}
-    - target: {fileID: 114504546911959188, guid: afe0eb46d14c2a74ea5a3adab3cf9acd,
-        type: 2}
-      propertyPath: PointSpawnPlayer
-      value: 
-      objectReference: {fileID: 1797804716}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe0eb46d14c2a74ea5a3adab3cf9acd, type: 2}
   m_IsPrefabParent: 0
@@ -3827,6 +3827,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114207958696136414, guid: ce50bc31c5337ac43b652125f0df6333,
+        type: 2}
+      propertyPath: PointSpawnPlayer
+      value: 
+      objectReference: {fileID: 1657295922}
     - target: {fileID: 114185863021020222, guid: ce50bc31c5337ac43b652125f0df6333,
         type: 2}
       propertyPath: InputMeleeAtack
@@ -3837,11 +3842,6 @@ Prefab:
       propertyPath: InputSpecialAttack
       value: 
       objectReference: {fileID: 294831375}
-    - target: {fileID: 114207958696136414, guid: ce50bc31c5337ac43b652125f0df6333,
-        type: 2}
-      propertyPath: PointSpawnPlayer
-      value: 
-      objectReference: {fileID: 1657295922}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce50bc31c5337ac43b652125f0df6333, type: 2}
   m_IsPrefabParent: 0

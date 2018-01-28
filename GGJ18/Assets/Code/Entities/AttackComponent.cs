@@ -27,7 +27,7 @@ public class AttackComponent : MonoBehaviour
             foreach (var entity in entityDetector.EntitiesInsideTrigger)
             {
                 var damageableComponent = entity.GetComponentInParent<Damageable>() ?? entity.GetComponent<Damageable>();
-                if (entity.CompareTag(Constants.tagPlayer))
+                if (entity.CompareTag(Constants.tagPlayer) && damageableComponent != null)
                 {
                     damageableComponent.RecieveDamage(meleeDamageComponent.Damage);
                 }
