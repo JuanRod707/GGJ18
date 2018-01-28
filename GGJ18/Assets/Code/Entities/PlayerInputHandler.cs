@@ -11,6 +11,8 @@ public class PlayerInputHandler : MonoBehaviour
     private NavMeshAgent meshAgent;
     private MovementComponent movementComponent;
     private PlayerIdComponent playerIdComponent;
+    private AnimatorOrientatorPlayer orientator;
+
     private const string verticalAxisTag = "Vertical_P";
     private const string horizontalAxisTag = "Horizontal_P";
     private const string attackButtonTag = "Attack_P";
@@ -31,6 +33,7 @@ public class PlayerInputHandler : MonoBehaviour
         movementComponent = GetComponent<MovementComponent>();
         playerIdComponent = GetComponent<PlayerIdComponent>();
         specialComponent = GetComponent<SpecialComponent>();
+        orientator = GetComponentInChildren<AnimatorOrientatorPlayer>();
         if (playerIdComponent == null)
         {
             throw new ArgumentNullException("PlayerIdComponent is not assigned to player");
@@ -68,6 +71,7 @@ public class PlayerInputHandler : MonoBehaviour
                     throw new ArgumentOutOfRangeException();
             }
             movementComponent.Move(offset);
+            orientator.UpdateDisplay(new Vector2(offset.x, offset.z));
         }
     }
 
