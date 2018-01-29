@@ -594,8 +594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 0
-  HitPoints: 8
-  DamagePerHit: 2
+  HitPoints: 10
+  DamagePerHit: 3
   AttackRate: 0.3
   ConvertToId: RobMin1
   RefName: Refs

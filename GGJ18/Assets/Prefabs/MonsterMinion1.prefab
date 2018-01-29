@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 1
-  HitPoints: 13
+  HitPoints: 10
   DamagePerHit: 4
   AttackRate: 0.5
   ConvertToId: MonMin1
